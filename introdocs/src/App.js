@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import User from "./components/User";
+import Navbar from "./components/Navbar";
 
 function App() {
+  const paragraph = "This is a paragraph";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form>
+        <div className="form-group">
+          <label htmlFor="username">Username: </label>
+          <input type="text" />
+          <p style={{ color: "crimson" }}>{paragraph}</p>
+          <User />
+          <Navbar />
+        </div>
+      </form>
     </div>
   );
 }
